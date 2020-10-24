@@ -13,6 +13,8 @@ typedef struct {
     int loser;
 } pair;
 
+pair pairs[MAX * (MAX) / 2];
+
 //voters who prefers candidate i over candidate j
 int preferences[MAX_CANDIDATES][MAX_CANDIDATES];
 
@@ -37,6 +39,10 @@ int main(int argc, string args[]) {
             return 0;
         }
     }
+    
+    
+    int voterCount = 0;
+    
 
 
     return 0;
