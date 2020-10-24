@@ -60,7 +60,9 @@ bool vote(int rank, string name, int ranks[]) {
 //updates preferences array based on the current voter's ranks
 void record_preferences(int ranks[]) {
     for (int i =0; i < candidateCount; i++) {
-        
+        for (int j =i+1; j < candidateCount; j++){
+            preferences[rank[i]][rank[j]]++;   
+        }
     }
 }
 
