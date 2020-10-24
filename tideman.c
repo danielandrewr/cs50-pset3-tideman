@@ -41,8 +41,7 @@ int main(int argc, string args[]) {
     }
     
     
-    int voterCount = 0;
-    
+    int voterCount = get_int("How many voters there are: ");
     int ranks[candidateCount];
     for (int i = 0; i < voterCount; i++) {
         for (int j = 0; j < candidateCount; j++) {
