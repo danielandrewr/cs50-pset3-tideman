@@ -43,7 +43,17 @@ int main(int argc, string args[]) {
     
     int voterCount = 0;
     
-
+    int ranks[candidateCount];
+    for (int i = 0; i < voterCount; i++) {
+        for (int j = 0; j < candidateCount; j++) {
+            string name = get_string("Rank %i: ", j + 1);
+            
+            if (!(vote(j, name, ranks)) {
+                printf("Invalid vote!\n);
+                return 0;
+            }
+        }
+    }
 
     return 0;
 }
