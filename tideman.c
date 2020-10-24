@@ -73,7 +73,17 @@ void record_preferences(int ranks[]) {
 }
 
 void add_pairs(void) {
-    
+    for (int i = 0; i < candidateCount; i ++){
+        for(int j = i+1; j < candidateCount; j++){
+            if(preferences[i][j] > preferences[j][i]){
+                pairs[pairCount++].winner = i;
+                pairs[pairCount++].loser = j;
+            }else if(preferences[i][j] < preferences[j][i]){
+                pairs[pairCount++].winner = j;
+                pairs[pairCount++].loser = i;
+            }
+        }
+    }
 }
 
 void sort_pairs(void) {
