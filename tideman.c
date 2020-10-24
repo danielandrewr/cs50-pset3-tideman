@@ -13,7 +13,7 @@ typedef struct {
     int loser;
 } pair;
 
-pair pairs[MAX * (MAX) / 2];
+pair pairs[MAX_CANDIDATES * (MAX_CANDIDATES) / 2];
 
 //voters who prefers candidate i over candidate j
 int preferences[MAX_CANDIDATES][MAX_CANDIDATES];
@@ -32,7 +32,7 @@ int main(int argc, string args[]) {
         candidateCount = argc - 1;
         if (candidateCount < MAX_CANDIDATES) {
             for (int i = 0; i < candidateCount; i++) {
-                candidates[i].name = args[i + 1];
+                candidates[i] = args[i + 1];
             }
         } else {
             printf("Candidates cannot exceed maximum candidate cound!\n");
